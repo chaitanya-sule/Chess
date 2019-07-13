@@ -7,4 +7,5 @@ public class King extends Piece {
     void performMove() {
 
     }
+
 }

@@ -1,6 +1,8 @@
 package java;
 
-public class BlackPlayer {
+import java.util.Arrays;
+
+public class BlackPlayer implements Player{
     private Pawn[] blackPawns = new Pawn[7];
     private Bishop[] blackBishops = new Bishop[1];
     private Knight[] blackKnights = new Knight[1];
@@ -8,6 +10,12 @@ public class BlackPlayer {
     private Queen blackQueen;
     private King blackKing;
 
+    public BlackPlayer() {
+        initialPosition();
+        namingMyPiece();
+    }
+
+    @Override
     public void initialPosition() {
         blackKing.setPosition("e1");
         blackQueen.setPosition("d1");
@@ -25,6 +33,16 @@ public class BlackPlayer {
         blackPawns[5].setPosition("f3");
         blackPawns[6].setPosition("g3");
         blackPawns[7].setPosition("h3");
+    }
+
+    @Override
+    public void namingMyPiece() {
+        Arrays.stream(blackPawns).forEach(pawn -> pawn.setName(BlackPiece.BLACKPAWN));
+        Arrays.stream(blackBishops).forEach(bishop -> bishop.setName(BlackPiece.BLACKBISHOP));
+        Arrays.stream(blackKnights).forEach(knight -> knight.setName(BlackPiece.BLACKKNIGHT));
+        Arrays.stream(blackRooks).forEach(rook -> rook.setName(BlackPiece.BLACKQUEEN));
+        blackQueen.setName(BlackPiece.BLACKQUEEN);
+        blackQueen.setName(BlackPiece.BLACKKING);
     }
 
     public Pawn[] getBlackPawns() {

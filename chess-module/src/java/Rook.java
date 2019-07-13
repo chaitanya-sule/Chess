@@ -6,4 +6,9 @@ public class Rook  extends Piece{
     void performMove() {
 
     }
+
+    @Override
+    void placePiece(Piece piece,ChessBoard chessBoard) {
+
+    }
 }

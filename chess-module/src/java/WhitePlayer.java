@@ -1,6 +1,8 @@
 package java;
 
-public class WhitePlayer {
+import java.util.Arrays;
+
+public class WhitePlayer implements Player{
     private Pawn[] whitePawns = new Pawn[7];
     private Bishop[] whiteBishops = new Bishop[1];
     private Knight[] whiteKnights = new Knight[1];
@@ -16,6 +18,22 @@ public class WhitePlayer {
         this.whiteRooks = whiteRooks;
     }
 
+    public WhitePlayer() {
+        initialPosition();
+        namingMyPiece();
+    }
+
+    @Override
+    public void namingMyPiece() {
+        Arrays.stream(whitePawns).forEach(pawn -> pawn.setName(WhitePiece.WHITEPAWN));
+        Arrays.stream(whiteBishops).forEach(bishop -> bishop.setName(WhitePiece.WHITEBISHOP));
+        Arrays.stream(whiteKnights).forEach(knight -> knight.setName(WhitePiece.WHITEKNIGHT));
+        Arrays.stream(whiteRooks).forEach(rook -> rook.setName(WhitePiece.WHITEROOK));
+        whiteQueen.setName(WhitePiece.WHITEQUEEN);
+        whiteKing.setName(WhitePiece.WHITEKING);
+    }
+
+    @Override
     public void initialPosition() {
         whiteKing.setPosition("e1");
         whiteQueen.setPosition("d1");
