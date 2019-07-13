@@ -2,7 +2,7 @@ package java;
 
 import java.util.Arrays;
 
-public class BlackPlayer implements Player{
+public class BlackPlayer implements Player {
     private Pawn[] blackPawns = new Pawn[7];
     private Bishop[] blackBishops = new Bishop[1];
     private Knight[] blackKnights = new Knight[1];

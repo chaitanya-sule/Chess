@@ -9,10 +9,6 @@ public class ChessBoard {
         return chessboard;
     }
 
-    public void setChessboard(String[][] chessboard) {
-        this.chessboard = chessboard;
-    }
-
     public Location getLocation(String loc) {
         Location location = new Location();
         Pattern pattern = Pattern.compile("[a-z]");
@@ -27,6 +23,6 @@ public class ChessBoard {
     }
 
     public void placePiece(Location location, NamePiece name) {
-            chessboard[location.getHorizontal()][location.getVertical()]=name.toString();
+        chessboard[location.getHorizontal()][location.getVertical()] = name.toString();
     }
 }

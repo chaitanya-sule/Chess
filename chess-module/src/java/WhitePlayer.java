@@ -2,7 +2,7 @@ package java;
 
 import java.util.Arrays;
 
-public class WhitePlayer implements Player{
+public class WhitePlayer implements Player {
     private Pawn[] whitePawns = new Pawn[7];
     private Bishop[] whiteBishops = new Bishop[1];
     private Knight[] whiteKnights = new Knight[1];
@@ -10,17 +10,17 @@ public class WhitePlayer implements Player{
     private Queen whiteQueen;
     private King whiteKing;
 
+    public WhitePlayer() {
+        initialPosition();
+        namingMyPiece();
+    }
+
     public Rook[] getWhiteRooks() {
         return whiteRooks;
     }
 
     public void setWhiteRooks(Rook[] whiteRooks) {
         this.whiteRooks = whiteRooks;
-    }
-
-    public WhitePlayer() {
-        initialPosition();
-        namingMyPiece();
     }
 
     @Override

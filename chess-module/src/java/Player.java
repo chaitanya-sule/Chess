@@ -1,7 +1,9 @@
 package java;
 
 public interface Player {
-     void initialPosition();
+
+    void initialPosition();
+
     void namingMyPiece();
 
 }

@@ -14,10 +14,10 @@ public class ChessFactory {
     private static void printChessBoard(WhitePlayer whitePlayer, BlackPlayer blackPlayer) {
         ChessBoard chessBoard = new ChessBoard();
         placePlayerPiece(whitePlayer,blackPlayer, chessBoard);
+
     }
 
     private static void placePlayerPiece(WhitePlayer whitePlayer, BlackPlayer blackPlayer, ChessBoard chessBoard) {
-        String[][] board = chessBoard.getChessboard();
         placeWhitePlayer(whitePlayer, chessBoard);
         placeBlackPlayer(blackPlayer, chessBoard);
     }
