@@ -11,3 +11,22 @@
 # ChessFactory is created to create ChessBoard Factory where we can print the complete Chess Board
 
 # NamePiece and Player are interfaces. NamePiece is interface to names for the names for the pieces. Player is the interface for for whiteplayer and blackplayer.
+
+# Chess Board design
+# ###########################
+# #|wr|wp|  |  |  |  |bp|br|#
+# #|-----------------------|#
+# #|wk|wp|  |  |  |  |bp|bk|#
+# #|-----------------------|#
+# #|wb|wp|  |  |  |  |bp|bb|#
+# #|-----------------------|#
+# #|wq|wp|  |  |  |  |bp|bq|#
+# #|-----------------------|#
+# #|wK|wp|  |  |  |  |bp|bK|#
+# #|-----------------------|#
+# #|wb|wp|  |  |  |  |bp|bb|#
+# #|-----------------------|#
+# #|wk|wp|  |  |  |  |bp|bk|#
+# #|-----------------------|#
+# #|wr|wp|  |  |  |  |bp|br|#
+# ###########################
