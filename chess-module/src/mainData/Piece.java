@@ -1,10 +1,9 @@
-package java;
+package mainData;
 
 public abstract class Piece {
     private String position;
     private Boolean dead = false;
     private NamePiece name;
-
 
     public String getPosition() {
         return position;
@@ -25,7 +24,7 @@ public abstract class Piece {
     abstract void performMove();
 
     public void placePiece(ChessBoard chessBoard) {
-        if (this.dead) {
+        if (this.getName() != null && !this.dead) {
             Location location = chessBoard.getLocation(position);
             chessBoard.placePiece(location, this.getName());
         }

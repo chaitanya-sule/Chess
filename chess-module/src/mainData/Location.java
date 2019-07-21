@@ -1,4 +1,4 @@
-package java;
+package mainData;
 
 public class Location {
     private int horizontal;

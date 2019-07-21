@@ -1,19 +1,19 @@
-package java;
+package mainData;
 
-
-import java.util.Arrays;
+import java.util.List;
 
 public class ChessFactory {
     public static void main(String[] args) {
         WhitePlayer whitePlayer = new WhitePlayer();
         BlackPlayer blackPlayer = new BlackPlayer();
 
-        printChessBoard(whitePlayer,blackPlayer);
+        printChessBoard(whitePlayer, blackPlayer);
     }
 
     private static void printChessBoard(WhitePlayer whitePlayer, BlackPlayer blackPlayer) {
         ChessBoard chessBoard = new ChessBoard();
-        placePlayerPiece(whitePlayer,blackPlayer, chessBoard);
+        placePlayerPiece(whitePlayer, blackPlayer, chessBoard);
+        chessBoard.print();
 
     }
 
@@ -26,7 +26,7 @@ public class ChessFactory {
         blackPlayer.getBlackKing().placePiece(chessBoard);
         blackPlayer.getBlackQueen().placePiece(chessBoard);
         placeArrayOfPiece(blackPlayer.getBlackRooks(), chessBoard);
-        placeArrayOfPiece(blackPlayer.getBlackBishops(),chessBoard);
+        placeArrayOfPiece(blackPlayer.getBlackBishops(), chessBoard);
         placeArrayOfPiece(blackPlayer.getBlackKnights(), chessBoard);
         placeArrayOfPiece(blackPlayer.getBlackPawns(), chessBoard);
     }
@@ -35,12 +35,12 @@ public class ChessFactory {
         whitePlayer.getWhiteQueen().placePiece(chessBoard);
         whitePlayer.getWhiteKing().placePiece(chessBoard);
         placeArrayOfPiece(whitePlayer.getWhiteRooks(), chessBoard);
-        placeArrayOfPiece(whitePlayer.getWhiteBishops(),chessBoard);
+        placeArrayOfPiece(whitePlayer.getWhiteBishops(), chessBoard);
         placeArrayOfPiece(whitePlayer.getWhiteKnights(), chessBoard);
         placeArrayOfPiece(whitePlayer.getWhitePawns(), chessBoard);
     }
 
-    private static void placeArrayOfPiece(Piece[] pieces, ChessBoard chessBoard) {
-        Arrays.stream(pieces).forEach(piece -> piece.placePiece(chessBoard));
+    private static void placeArrayOfPiece(List<? extends Piece> pieces, ChessBoard chessBoard) {
+        pieces.forEach(piece -> piece.placePiece(chessBoard));
     }
 }

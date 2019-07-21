@@ -1,4 +1,4 @@
-package java;
+package mainData;
 
 public class Pawn extends Piece {
 
